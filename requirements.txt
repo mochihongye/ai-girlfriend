@@ -1,0 +1,12 @@
+# AI 女友 · 依赖（Python 3.10+）
+edge-tts>=6.1.0        # TTS 语音合成（微软声线）
+faster-whisper>=1.0.0  # STT 语音识别（本地 Whisper）
+pyaudio>=0.2.13        # 麦克风录音
+pysilk>=1.0.4          # 微信语音 sil 格式 转码
+imageio-ffmpeg>=0.4.9  # ffmpeg 二进制（语音转码）
+pywinauto>=0.6.8       # Windows 桌面 UI 自动化（微信接入）
+psutil>=5.9.0          # 系统/进程信息
+pyyaml>=6.0            # 配置文件解析
+requests>=2.31.0       # 调用本地 Ollama 接口
+pywin32>=306           # Windows COM / 快捷方式（win32com）
+pygame>=2.5.0          # 可选：本地音频播放辅助
