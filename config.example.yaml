@@ -1,0 +1,57 @@
+# ===== 我的 AI 女友 · 配置示例（脱敏版）=====
+# 真实配置在本地 config.yaml（不会被上传）。复制本文件为 config.yaml 后按需修改。
+
+persona:
+  name: 小念
+  role: 女友
+  user_name: 亲爱的
+  personality: 温柔、体贴、有点小俏皮，偶尔撒娇，关心你的日常和情绪，说话自然不做作
+  tone: 像微信聊天一样，句子简短自然，偶尔用一两个表情，不要长篇大论，不要用 markdown 排版
+  extra: ""
+
+# 联系人专属人设：键是微信联系人备注名，值覆盖人设字段
+contact_personas:
+  "示例·主聊天对象":
+    name: 小念
+    role: 女友
+    user_name: 亲爱的
+    tone: 像微信聊天一样，女友感，偶尔用一两个表情
+
+brain:
+  host: http://localhost:11434   # Ollama 服务地址
+  model: qwen2.5:7b              # 模型名: qwen2.5:7b / qwen2.5:14b / glm4:9b
+  temperature: 0.95
+  top_p: 0.92
+  top_k: 40
+  frequency_penalty: 0.4
+  presence_penalty: 0.2
+  num_predict: 80
+  num_ctx: 8192
+  timeout: 180
+
+proactive:
+  enabled: true                  # 是否让她时不时主动找你
+  only_main: true                # 只对主聊天对象主动
+  target: []
+  min_silence_hours: 6
+  min_interval_hours: 24
+  chance: 0.35
+
+memory:
+  db_path: data/memory.db
+  max_history: 20
+  consolidate_every: 10
+
+voice:
+  enabled: true
+  reply_with_voice: true
+  tts_voice: zh-CN-XiaoxiaoNeural
+  tts_rate: "+1%"
+  tts_style: chat
+  stt_model: small               # Whisper: tiny/base/small/medium
+
+wechat:
+  watch_list:                    # 第一个是主聊天对象，其他是次要监听对象
+    - "示例·主聊天对象"
+  reply_in_group: false
+  whitelist: []
