@@ -1,0 +1,23 @@
+# ===== 隐私：绝不外传 =====
+# 对话记忆库（含和 AI 的私密聊天记录）
+data/
+# 真实配置（含真实联系人备注名与关系），只上传脱敏的 config.example.yaml
+config.yaml
+# 界面偏好（含真实联系人相关的 ui 状态）
+ui_prefs.json
+
+# ===== 环境 / 缓存 =====
+venv/
+__pycache__/
+*.pyc
+modle/
+
+# ===== 系统 / 编辑器 =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.lnk
+
+# ===== 一次性调试 / 探测脚本 =====
+_*.py
